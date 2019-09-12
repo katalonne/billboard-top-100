@@ -127,15 +127,10 @@ const getChart = function (chartName = 'hot-100', date, cb)  {
       cb(err, null)
       return
   }
-  // console.log(`in chart`)
   const billboardDomain = `https://www.billboard.com`
   const billboardLink = `${billboardDomain}/charts/${chartName}${date ? `/${date}` : ''}`
-  // console.log(request('GET', billboardLink))
   request('GET', billboardLink).then(res => {
-    // console.log(res)
-    // console.log(res.statusCode)
     const statusOK = String(res.statusCode)[0] === '2'
-    // console.log(statusOK)
     if (statusOK) {
       // RegEx Patterns
       const contentRE = /<div.*class="chart-list-item.*data-rank=".*>/gi
@@ -145,9 +140,6 @@ const getChart = function (chartName = 'hot-100', date, cb)  {
       const currentWeekRE = /chart-detail-header__date-selector-button">(.*?)</gs
       
       const body = isBrowser ? res.getBody() : res.getBody().toString()
-      // console.log(`isBrowser: `, isBrowser)
-      // console.log(body)
-      // console.log(`typeof window: `, typeof window)
       const covers = getCovers(body, imageRE, apostropheRE)
       const songs = getSongs(body, contentRE, apostropheRE, covers)
       const week = getFormattedWeek(body, currentWeekRE)
@@ -160,8 +152,6 @@ const getChart = function (chartName = 'hot-100', date, cb)  {
         nextWeek
       }
 
-      // console.log(chart.week)
-
       cb(null, chart)
     } else {
       const error = `Something went wrong, got status ${res.statusCode}`
@@ -170,11 +160,6 @@ const getChart = function (chartName = 'hot-100', date, cb)  {
   })
 }
 
-awaitify(getChart, 3)('hot-100').then(chart => {
-  console.log(chart)
-}).catch(e => {
-  console.error(e)
-})
 module.exports = awaitify(getChart, 3);
 
 // Allow use of default import syntax in TypeScript
