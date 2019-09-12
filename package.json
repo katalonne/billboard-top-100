@@ -1,6 +1,6 @@
 {
   "name": "@katalonne/billboard-top-100",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get latest Billboard chart list. For browser and node.",
   "private": false,
   "main": "dist/billboard-top-100.node.js",
