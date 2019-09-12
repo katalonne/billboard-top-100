@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/katalonne/billboard-top-100.svg?branch=master)](https://travis-ci.org/katalonne/billboard-top-100)
 [![codebeat badge](https://codebeat.co/badges/299f68a9-8267-4f8d-a3e8-9abc5910f582)](https://codebeat.co/projects/github-com-katalonne-billboard-top-100-master)
 [![GitHub open issues](https://img.shields.io/github/issues/katalonne/billboard-top-100.svg)](https://github.com/katalonne/billboard-top-100/issues?q=is%3Aopen+is%3Aissue)
-[![npm version](https://img.shields.io/npm/v/billboard-top-100.svg)](https://www.npmjs.com/package/billboard-top-100)
+[![npm version](https://img.shields.io/npm/v/billboard-top-100.svg)](https://www.npmjs.com/package/@katalonne/billboard-top-100)
 [![MIT License](https://img.shields.io/github/license/katalonne/billboard-top-100.svg)](https://github.com/katalonne/billboard-top-100/blob/master/LICENSE)
 
 Promise and Callback based module API for getting Billboard chart list
