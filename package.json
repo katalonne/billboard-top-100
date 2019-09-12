@@ -1,0 +1,69 @@
+{
+  "name": "@katalonne/billboard-top-100",
+  "version": "1.0.0",
+  "description": "Get latest Billboard chart list. For browser and node.",
+  "private": false,
+  "main": "dist/billboard-top-100.node.js",
+  "browser": "dist/billboard-top-100.js",
+  "files": [
+    "dist",
+    "src/sass"
+  ],
+  "scripts": {
+    "dev": "webpack --config build/webpack.dev.js",
+    "build": "webpack --config build/webpack.prod.js",
+    "start": "webpack-dev-server --config build/webpack.dev.js --hot --open --https",
+    "test": "jest --runInBand --verbose",
+    "coverage": "npm run test -- --coverage",
+    "prepublishOnly": "npm test && npm run build",
+    "upgrade-all": "npx npm-check-updates -u && npm i"
+  },
+  "author": {
+    "name": "Catalin Besleaga",
+    "url": "http://catalinbesleaga.co"
+  },
+  "repository": "https://github.com/katalonne/billboard-top-100",
+  "homepage": "https://github.com/katalonne/billboard-top-100#readme",
+  "license": "MIT",
+  "sideEffects": false,
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.4.9",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "keywords": [
+    "browser",
+    "library",
+    "billboard-top-100",
+    "info",
+    "javascript",
+    "billboard",
+    "top",
+    "babel",
+    "100"
+  ],
+  "dependencies": {
+    "then-request": "^6.0.2"
+  }
+}
